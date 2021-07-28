@@ -1,9 +1,9 @@
 import { Router } from "express";
 
+import { messageController } from "./controllers/MessageController";
+
 const router = Router();
 
-router.get("/", (request, response) => {
-  return response.status(200).json({ message: "Hello World!" });
-});
+router.post("/message", messageController.create);
 
 export { router };
