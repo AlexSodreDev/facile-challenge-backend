@@ -4,12 +4,15 @@
   "port": 5432,
   "username": "postgres",
   "password": "example",
-  "database": "facile_db",
+  "database": "postgres",
   "logging": true,
   "entities": [
     "src/models/*.ts"
   ],
   "migrations": [
-    "src/migration/**/*.ts"
-  ]
+    "./src/database/migrations/**.ts"
+  ],
+  "cli": {
+    "migrationsDir": "./src/database/migrations"
+  }
 }
