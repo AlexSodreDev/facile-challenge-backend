@@ -7,8 +7,9 @@ export const createMessage = {
   parameters: [
     {
       in: "body",
-      name: "Name",
+      name: "Message",
       description: "Receive the message",
+      required: true,
       schema: {
         type: "object",
         required: "name",
@@ -28,12 +29,12 @@ export const createMessage = {
         "application/json": {
           schema: {
             type: "object",
-            properties: {
+            items: {
               id: {
                 type: "integer",
                 example: 1,
               },
-              encrypted_name: {
+              name: {
                 type: "string",
                 example: "561651@1565#asd516",
               },
