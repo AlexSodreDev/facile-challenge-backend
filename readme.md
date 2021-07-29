@@ -18,7 +18,7 @@
 
 ## 💻Requesitos:
 
-- Node.js -  [Instalação Node.js 12](https://nodejs.org/en/), including the NPM package management tool.
+- Node.js -  [Instalação Node.js 12](https://nodejs.org/en/), incluindo o NPM package management tool.
 
 - Typescript -  [Instalação Typescript Node.js 12](https://www.typescriptlang.org/):  `npm install -g typescript`.
 
@@ -32,6 +32,9 @@ facile-challenge-backend$ npm install
 facile-challenge-backend$ docker-compose up
 
 facile-challenge-backend$ npm run dev
+
+### Para executar os testes:
+facile-challenge-backend$ npm run test
 
 ### Para acessar a documentação da API:
 http://localhost:3333/api-docs
