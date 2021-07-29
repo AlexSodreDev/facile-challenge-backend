@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
-import { getCustomRepository } from "typeorm";
 
-import { MessageRepository } from "../repositories/MessageRepository";
+import { messageRepository } from "../repositories/MessageRepository";
 
 class MessageController {
   async create(request: Request, response: Response) {
@@ -13,13 +12,8 @@ class MessageController {
         message: "O campo name é obrigatório!",
       });
     }
-    const messageRepository = getCustomRepository(MessageRepository);
 
-    const message = messageRepository.create({
-      encrypted_name: name,
-    });
-
-    await messageRepository.save(message);
+    const message = await messageRepository.store(name);
 
     return response.status(201).json(message);
   }
