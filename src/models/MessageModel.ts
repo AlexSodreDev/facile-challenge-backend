@@ -19,6 +19,7 @@ class Message {
   @BeforeUpdate()
   hashPassword() {
     this.encrypted_name = bcrypt.hashSync(this.encrypted_name, 8);
+    console.log("Mensagem encryptada com sucesso");
   }
 }
 

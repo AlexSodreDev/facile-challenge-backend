@@ -12,6 +12,7 @@ class MessageRepository extends Repository<Message> {
     });
 
     const messageCreated = await messageRepository.save(message);
+    console.log("Mensagem criada com sucesso", messageCreated);
     return messageCreated;
   }
 }
